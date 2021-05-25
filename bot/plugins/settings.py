@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG
+# (c) @Dlaize
 
 import re
 from pyrogram import Client, filters
@@ -64,7 +64,7 @@ async def settings(bot, update):
         [
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "✖️ Close", callback_data="close"
                 )
         ]
     ]
