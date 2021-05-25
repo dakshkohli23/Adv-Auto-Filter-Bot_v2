@@ -95,7 +95,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"📄 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 📄", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -122,7 +122,7 @@ async def cb_navg(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                f"⚜ {chat_name} ⚜", url=invite_link
+                                f"⚡ {chat_name} ⚡", url=invite_link
                             )
                     ]
                 )
@@ -131,7 +131,7 @@ async def cb_navg(bot, update: CallbackQuery):
                 ibuttons[-1].append(
                     InlineKeyboardButton
                         (
-                            f"⚜ {chat_name} ⚜", url=invite_link
+                            f"⚡ {chat_name} ⚡", url=invite_link
                         )
                 )
             
@@ -183,35 +183,35 @@ async def cb_settings(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Channels", callback_data=f"channel_list({chat_id})"
+                    "🔮 Channels", callback_data=f"channel_list({chat_id})"
                 ), 
             
             InlineKeyboardButton
                 (
-                    "Filter Types", callback_data=f"types({chat_id})"
+                    "📋 Filter Types", callback_data=f"types({chat_id})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "Configure 🛠", callback_data=f"config({chat_id})"
+                    "⚒️ Configure", callback_data=f"config({chat_id})"
                 )
         ], 
         [
             InlineKeyboardButton
                 (
-                    "Status", callback_data=f"status({chat_id})"
+                    "🛰️ Status", callback_data=f"status({chat_id})"
                 ),
             
             InlineKeyboardButton
                 (
-                    "About", callback_data=f"about({chat_id})"
+                    "❕ About", callback_data=f"about({chat_id})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "✖️ Close", callback_data="close"
                 )
         ]
     ]
@@ -266,12 +266,12 @@ async def cb_warn(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Yes", callback_data=f"{action}({channel_id}|{channel_name})"
+                    "✅ Yes", callback_data=f"{action}({channel_id}|{channel_name})"
                 ), 
             
             InlineKeyboardButton
                 (
-                    "No", callback_data="close"
+                    "⛔ No", callback_data="close"
                 )
         ]
     ]
@@ -337,7 +337,7 @@ async def cb_channel_list(bot, update: CallbackQuery):
             
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "✖️ Close", callback_data="close"
                 )
         ]
     ) 
@@ -439,7 +439,7 @@ async def cb_info(bot, update: CallbackQuery):
                         
                         InlineKeyboardButton
                             (
-                                "Delete ❌", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                                "🗑️ Delete", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                             )
                     ]
         ]
@@ -449,12 +449,12 @@ async def cb_info(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                "💠 Connect 💠", callback_data=f"warn({channel_id}|{channel_name}|connect)"
+                                "🌐 Connect 🌐", callback_data=f"warn({channel_id}|{channel_name}|connect)"
                             ),
                         
                         InlineKeyboardButton
                             (
-                                "Delete ❌", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                                "🗑️ Delete", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                             )
                     ]
         ]
@@ -463,7 +463,7 @@ async def cb_info(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "Delete Filters ⚠", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
+                        "⚠️ Delete Filters", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
                     )
             ]
     )
@@ -527,7 +527,7 @@ async def cb_connect(bot, update: CallbackQuery):
                     
                     InlineKeyboardButton
                         (
-                            "Delete ❌", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                            "🗑️ Delete", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                         )
                 ]
     ]
@@ -536,7 +536,7 @@ async def cb_connect(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "Delete Filters ⚠", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
+                        "⚠️ Delete Filters", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
                     )
             ]
     )
@@ -594,12 +594,12 @@ async def cb_disconnect(bot, update: CallbackQuery):
                 [
                     InlineKeyboardButton
                         (
-                            "💠 Connect 💠", callback_data=f"warn({channel_id}|{channel_name}|connect)"
+                            "🌐 Connect 🌐", callback_data=f"warn({channel_id}|{channel_name}|connect)"
                         ),
                     
                     InlineKeyboardButton
                         (
-                            "Delete ❌", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                            "🗑️ Delete", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                         )
                 ]
     ]
@@ -608,7 +608,7 @@ async def cb_disconnect(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "Delete Filters ⚠", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
+                        "⚠️ Delete Filters", callback_data=f"warn({channel_id}|{channel_name}|f_delete)"
                     )
             ]
     )
@@ -669,7 +669,7 @@ async def cb_channel_delete(bot, update: CallbackQuery):
                 
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "✖️ Close", callback_data="close"
                 )
         ]
     ]
@@ -712,12 +712,12 @@ async def cb_filters_delete(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Back", callback_data="settings"
+                    "🔙 Back", callback_data="settings"
                 ),
             
             InlineKeyboardButton
                 (
-                    "Close", callback_data="close"
+                    "✖️ Close", callback_data="close"
                 )
         ]
     ]
@@ -764,7 +764,7 @@ async def cb_types(bot, update: CallbackQuery):
     
     else:
         text+="\n<i><b>Video Index:</b> Disabled</i>\n"
-        v_e="❎"
+        v_e="🚫"
         vcb_data = f"toggle({chat_id}|video|True)"
 
     if doc:
@@ -774,7 +774,7 @@ async def cb_types(bot, update: CallbackQuery):
 
     else:
         text+="\n<i><b>Document Index:</b> Disabled</i>\n"
-        d_e="❎"
+        d_e="🚫"
         dcb_data = f"toggle({chat_id}|document|True)"
 
     if aud:
@@ -784,7 +784,7 @@ async def cb_types(bot, update: CallbackQuery):
 
     else:
         text+="\n<i><b>Audio Index:</b> Disabled</i>\n"
-        a_e="❎"
+        a_e="🚫"
         acb_data = f"toggle({chat_id}|audio|True)"
 
     
@@ -878,7 +878,7 @@ async def cb_toggle(bot, update: CallbackQuery):
     
     else:
         text+="\n<i><b>Video Index:</b> Disabled</i>\n"
-        v_e="❎"
+        v_e="🚫"
         vcb_data = f"toggle({chat_id}|video|True)"
 
     if doc:
@@ -888,7 +888,7 @@ async def cb_toggle(bot, update: CallbackQuery):
 
     else:
         text+="\n<i><b>Document Index:</b> Disabled</i>\n"
-        d_e="❎"
+        d_e="🚫"
         dcb_data = f"toggle({chat_id}|document|True)"
 
     if aud:
@@ -898,7 +898,7 @@ async def cb_toggle(bot, update: CallbackQuery):
 
     else:
         text+="\n<i><b>Audio Index:</b> Disabled</i>\n"
-        a_e="❎"
+        a_e="🚫"
         acb_data = f"toggle({chat_id}|audio|True)"
 
     
